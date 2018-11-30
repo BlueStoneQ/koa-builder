@@ -1,0 +1,25 @@
+{
+  "name": "node-back-end",
+  "version": "1.0.0",
+  "description": "node scaffold for maimai or other project to fill work",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueStoneQ/node-back-scaffold.git"
+  },
+  "keywords": [
+    "node",
+    "koa2",
+    "mysql",
+    "redis"
+  ],
+  "author": "qiaoyang <qiaoyang@bonc.com.cn>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueStoneQ/node-backup/issues"
+  },
+  "homepage": "https://github.com/BlueStoneQ/node-backup#readme"
+}
