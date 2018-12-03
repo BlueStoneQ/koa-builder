@@ -1,13 +1,20 @@
 # node-backup
 为麦麦搭建的nodejs后台开发脚手架，初始还是包括view的ssr结构，后面往前后端分离+同构渲染进化
 
+# 目录说明
+
 # step
 1. 搭建目录
 2. 添加依赖(koa2 及 相关) + 服务器搭建（可以访问）
 3. 路由建设
-4. 数据库部分建设（mysql + redis）
-5. 日志系统建设
-6. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
+4. view
+5. log
+6. error
+7. eslint
+8. babel
+9. 数据库部分建设（mysql + redis）
+10. 日志系统建设
+11. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
 
 # test
 * postman
