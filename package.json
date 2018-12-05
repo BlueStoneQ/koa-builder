@@ -4,7 +4,8 @@
   "description": "node scaffold for maimai or other project to fill work",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon app.js",
+    "i-for-prod": "npm install --production"
   },
   "repository": {
     "type": "git",
