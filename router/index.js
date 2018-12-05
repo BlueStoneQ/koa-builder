@@ -1,9 +1,10 @@
+/**
+ * 这个文件就是后面把所有的子路由收集起来 使用router暴露出去
+ */
 const Router = require('koa-router');
+const controller = require('../controller');
 const router = new Router();
 
-router.get('/', (ctx, next) => {
-  ctx.body = 'Hello Nodejs-koa Router 开始分离';
-  // ctx.router available
-});
+router.get('/', controller.handle);
 
 module.exports = router;
