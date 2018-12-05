@@ -2,6 +2,18 @@
 为麦麦搭建的nodejs后台开发脚手架，初始还是包括view的ssr结构，后面往前后端分离+同构渲染进化
 
 # 目录说明
+```
+|—— controller          路由对应的业务逻辑层
+|—— log
+|—— middleware
+|—— node_modules
+|—— public
+|—— router
+|—— service
+|—— view
+|—— app.js
+|—— package.json
+```
 
 # step
 1. 搭建目录
@@ -13,8 +25,9 @@
 7. eslint
 8. babel
 9. 数据库部分建设（mysql + redis）
-10. 日志系统建设
-11. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
+10. 缓存系统建设（session + redis session）
+11. 日志系统建设
+12. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
 
 # test
 * postman
