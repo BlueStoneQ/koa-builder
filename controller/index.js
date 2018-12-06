@@ -8,3 +8,4 @@ exports.handle = async ctx => {
 }
 
 exports.signup = signup.signup;
+exports.signupView = signup.signupView;
