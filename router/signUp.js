@@ -6,5 +6,5 @@
 const controller = require('../controller');
 
 module.exports = (router) => {
-  router.get('/signUp', controller.signUp);
+  router.get('/signup', controller.signup);
 }

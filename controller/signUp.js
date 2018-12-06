@@ -1,6 +1,6 @@
 /**
- * signUp相关的路由处理
+ * signup相关的路由处理
  */
-exports.signUp = async ctx => {
-  ctx.body = 'signUp';
+exports.signup = async ctx => {
+  ctx.body = 'signup';
 }

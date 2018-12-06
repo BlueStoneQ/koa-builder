@@ -3,12 +3,12 @@
  */
 const Router = require('koa-router');
 const controller = require('../controller');
-const signUp = require('./signUp');
+const signup = require('./signup');
 const router = new Router();
 
 router.get('/', controller.handle);
 
 // 注册部分子路由
-signUp(router);
+signup(router);
 
 module.exports = router;
