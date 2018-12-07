@@ -3,6 +3,7 @@ const Koa = require('koa');
 const static = require('koa-static');
 const views = require('koa-views');
 const bodyParser = require('koa-bodyparser');
+const json = require('koa-json');
 const router = require('./router');
 
 const app = new Koa();
@@ -26,6 +27,12 @@ app.use(views(path.join(__dirname, 'views'), {
 app.use(bodyParser({
   formLimit: '1mb'
 }));
+
+/**
+ * 使响应为json格式
+ * 1- 省去每次对Content-Type的设置
+ */
+app.use(json());
 
 // 路由
 app
