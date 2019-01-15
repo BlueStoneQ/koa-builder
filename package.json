@@ -4,7 +4,7 @@
   "description": "node scaffold for maimai or other project to fill work",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon app.js",
+    "test": "cross-env NODE_ENV=development nodemon app.js",
     "i-for-prod": "npm install --production"
   },
   "repository": {
@@ -30,6 +30,10 @@
     "koa-json": "^2.0.2",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "koa-views": "^6.1.4"
+    "koa-views": "^6.1.4",
+    "log4js": "^3.0.6"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }

@@ -1,2 +1,5 @@
 # node_module文件
 /node_modules
+
+# 开发中产生的日志文件
+/logs

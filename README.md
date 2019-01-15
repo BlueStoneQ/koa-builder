@@ -3,6 +3,7 @@
 
 # 目录说明
 ```
+|—— config              配置项文件
 |—— controller          路由对应的业务逻辑层
 |—— log
 |—— middleware
@@ -55,3 +56,9 @@ ssr
 2. 有几个示例
 3. 脚手架和加入了业务的脚手架分两个仓库管理 -- 这里只管升级进化脚手架 -- 哪个项目需要从这里clone即可
 4. 请出一个Blog -- 《手把手教你搭建一个koa2脚手架》 -- 文档对于代码的维护性非常重要，避免你过2个月后突然看不懂自己的代码哈哈
+
+# 参考
+* [log4js](https://www.cnblogs.com/duhuo/p/5176154.html)
+* 但是上面这篇log4js的配置是旧版的(在概念上讲得比较清楚)，后面会出一篇关于第三版log4js的使用Blog
+* [新版的log4js的配置](https://github.com/log4js-node/log4js-example/blob/master/config/log4js.json)
+* [新版的log4js配置-2](https://www.2cto.com/kf/201808/765953.html)
