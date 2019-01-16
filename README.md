@@ -32,12 +32,11 @@
 4. view
 5. log
 6. error
-7. eslint
-8. babel
+7. ~~eslint~~
+8. ~~babel~~
 9. 数据库部分建设（mysql + redis）
-10. 缓存系统建设（session + redis session）
-11. 日志系统建设
-12. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
+10. 缓存系统建设（cookie session + redis session）
+11. nginx代理设置（可以用nginx代理 也可以直接node服务器服务）
 
 # test
 * postman
