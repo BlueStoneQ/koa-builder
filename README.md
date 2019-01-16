@@ -64,3 +64,7 @@ ssr
 * [新版的log4js配置-2](https://www.2cto.com/kf/201808/765953.html)
 * [log4js官方推荐的配置 以此为主](https://github.com/log4js-node/log4js-example/blob/master/config/log4js.json)
 * [log4js中间件的实现参考](https://blog.csdn.net/samfung09/article/details/83689133)
+
+# 开发日志
+* 日志系统 - [log4js](https://www.npmjs.com/package/log4js)
+* 错误系统 - [koa-onerror](https://www.npmjs.com/package/koa-onerror)

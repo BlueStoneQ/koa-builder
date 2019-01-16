@@ -4,10 +4,13 @@ const static = require('koa-static');
 const views = require('koa-views');
 const bodyParser = require('koa-bodyparser');
 const json = require('koa-json');
+const onerror = require('koa-onerror');
 const router = require('./router');
 const log = require('./middleware/log4js')
 
 const app = new Koa();
+// 加载错误系统
+onerror(app);
 // PORT 端口号 -- 后面放到配置文件
 const PORT = 3001;
 
