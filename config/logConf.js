@@ -15,15 +15,15 @@
 module.exports = {
   // replaceConsole: process.env.NODE_ENV !== "development" || false, // 当在开发模式下 所有日志输出到控制台 方便调试
   appenders: {
-    stdout: { // 控制台输出
-      type: "console"
-    },
+    // stdout: { // 控制台输出
+    //   type: "console"
+    // },
     access: { // 访问（运营）日志
       type: 'dateFile',
       filename: "logs/access/access", // 生成规则： acess + pattern
       pattern: "-yyyy-MM-dd.log",
-      alwaysIncludePattern: true, // 这个选项才可以使命名时 pattern生效
-      category: 'http' // http对应categories中的category 未指定category的都是categories.default
+      alwaysIncludePattern: true // 这个选项才可以使命名时 pattern生效
+      // category: 'http' // http对应categories中的category 未指定category的都是categories.default
     },
     app: { // 应用日志
       type: 'file',
@@ -43,12 +43,12 @@ module.exports = {
   },
   categories: { // 自定义类型+级别
     default: { // 未指定category的appender的级别默认为这个配置
-      appenders: ['app', 'errors'],
-      level: 'DEBUG'
-    },
-    http: {
-      appenders: ['access'],
-      level: 'DEBUG'
+      appenders: ['app', 'errors', 'access'],
+      level: 'WARN'
     }
+    // http: {
+    //   appenders: ['access'],
+    //   level: 'DEBUG'
+    // }
   }
 }
