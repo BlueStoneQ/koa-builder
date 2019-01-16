@@ -4,15 +4,12 @@ const static = require('koa-static');
 const views = require('koa-views');
 const bodyParser = require('koa-bodyparser');
 const json = require('koa-json');
-const log4js = require('log4js');
-const log4js_config = require('./config/logConf');
 const router = require('./router');
+const log = require('./middleware/log4js')
 
 const app = new Koa();
-// 日志系统--读取配置文件
-log4js.configure(log4js_config);
 // PORT 端口号 -- 后面放到配置文件
-const PORT = 3000;
+const PORT = 3001;
 
 // 静态资源
 app.use(static(path.join(__dirname, 'public')));
@@ -39,33 +36,9 @@ app.use(bodyParser({
 app.use(json());
 
 /**
- * START log系统 测试 ---------------------------------
+ * 加载日志系统-把日志系统对象挂载到ctx上
  */
-const logAccess = log4js.getLogger('access');
-const logApp = log4js.getLogger('app');
-const logError = log4js.getLogger('error');
-
-console.log('开始写日志')
-logAccess.trace('This is my logFile---logAccess');
-logAccess.debug('Let\'s go');
-logAccess.info('date log');
-logAccess.warn('hahhhahah');
-logAccess.error('火星救援');
-
-logApp.trace('This is my logFile---logApp');
-logApp.debug('Let\'s go');
-logApp.info('date log');
-logApp.warn('hahhhahah');
-logApp.error('火星救援');
-
-logError.trace('This is my logFile---error');
-logError.debug('Let\'s go');
-logError.info('date log');
-logError.warn('hahhhahah');
-logError.error('火星救援');
-/**
- * END log系统 测试 ---------------------------------
- */
+app.use(log())
 
 // 路由
 app
