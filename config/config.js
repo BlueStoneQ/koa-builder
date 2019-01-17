@@ -12,11 +12,11 @@
   // DB-REDIS配置
   // DB-MYSQL数据库配置
   MYSQL: {
-    host: '47.105.62.98', // 数据库主机地址
-    port: '3306', // 数据库使用的端口
-    user: 'root', // 访问用户
-    password: 'man/Will179', // 访问用户对应的密码
-    database: 'maimai_test' // 数据库名称--后面改成麦麦
+    HOST: '47.105.62.98', // 数据库主机地址
+    PORT: '3306', // 数据库使用的端口
+    USER: 'manager', // 访问用户
+    PASSWORD: 'man/Will179', // 访问用户对应的密码
+    DATABASE: 'maimai_test' // 数据库名称--后面改成maimai
   }
  }
 
@@ -27,16 +27,16 @@
   // DB-REDIS配置
   // DB-MYSQL数据库配置
   MYSQL: {
-    DATABASE: 'mysql0531',
-    USER: 'root',
-    PASSWORD: '123456',
-    PORT: '3306',
-    HOST: 'localhost'
-    // host: '47.105.62.98', // 数据库主机地址
-    // port: '3306', // 数据库使用的端口
-    // user: 'root', // 访问用户
-    // password: 'man/Will179', // 访问用户对应的密码
-    // database: 'maimai_test' // 数据库名称--后面改成麦麦
+    // DATABASE: 'mysql0531',  // 本地mysql 8.0
+    // USER: 'root',
+    // PASSWORD: '123456',
+    // PORT: '3306',
+    // HOST: 'localhost'
+    HOST: '47.105.62.98', // 数据库主机地址
+    PORT: '3306', // 数据库使用的端口
+    USER: 'manager', // 访问用户
+    PASSWORD: 'man/Will179', // 访问用户对应的密码
+    DATABASE: 'maimai_test' // 数据库名称--后面改成maimai
   }
  }
 
