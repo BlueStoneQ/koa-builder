@@ -1,6 +1,7 @@
 /**
  * 工具 - 利用mysql + config提供一个执行sql语句的query函数
  * 1- 供同目录下的其他功能service调用
+ * 2- 该目录下 一般一张表对应一个service
  */
 const mysql = require('mysql')
 const config = require('../../config/config')
@@ -9,11 +10,11 @@ const config = require('../../config/config')
  * 创建连接池
  */
 const pool = mysql.createPool({
-  host: config.MYSQL.host,
-  port: config.MYSQL.port,
-  user: config.MYSQL.user,
-  password: config.MYSQL.password,
-  database: config.MYSQL.database
+  host: config.MYSQL.HOST,
+  port: config.MYSQL.PORT,
+  user: config.MYSQL.USER,
+  password: config.MYSQL.PASSWORD,
+  database: config.MYSQL.DATABASE
 });
 
 /**
