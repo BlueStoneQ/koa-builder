@@ -7,12 +7,11 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const router = require('./router');
 const log = require('./middleware/log4js')
+const config = require('./config/config')
 
 const app = new Koa();
 // 加载错误系统
 onerror(app);
-// PORT 端口号 -- 后面放到配置文件
-const PORT = 3001;
 
 // 静态资源
 app.use(static(path.join(__dirname, 'public')));
@@ -48,5 +47,5 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.listen(PORT);
-console.log(`Listening on port http://127.0.0.1:${PORT}`);
+app.listen(config.SERVER_PORT);
+console.log(`Listening on port http://127.0.0.1:${config.SERVER_PORT}`);
