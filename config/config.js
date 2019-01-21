@@ -10,6 +10,12 @@
   // 服务器端口
   SERVER_PORT: 3000,
   // DB-REDIS配置
+  REDIS: {
+    HOST: '127.0.0.1', // 数据库主机地址-生产环境 暂时就是一台服务器上
+    PORT: '6379', // 端口号
+    PASSWORD: 'act1314', // 密码
+    MAX_AGE: 3600000
+  },
   // DB-MYSQL数据库配置
   MYSQL: {
     HOST: '47.105.62.98', // 数据库主机地址
@@ -25,6 +31,12 @@
   // 服务器端口
   SERVER_PORT: 3000,
   // DB-REDIS配置
+  REDIS: {
+    HOST: '47.105.62.98', // 数据库主机地址
+    PORT: '6379', // 端口号
+    PASSWORD: 'act1314', // 密码
+    MAX_AGE: 3600000
+  },
   // DB-MYSQL数据库配置
   MYSQL: {
     // DATABASE: 'mysql0531',  // 本地mysql 8.0

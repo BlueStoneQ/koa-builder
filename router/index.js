@@ -4,11 +4,13 @@
 const Router = require('koa-router');
 const controller = require('../controller');
 const signup = require('./signup');
+const signin = require('./signin');
 const router = new Router();
 
 router.get('/', controller.handle);
 
 // 注册部分子路由
 signup(router);
+signin(router);
 
 module.exports = router;

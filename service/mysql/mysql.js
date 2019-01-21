@@ -3,8 +3,8 @@
  * 1- 供同目录下的其他功能service调用
  * 2- 该目录下 一般一张表对应一个service
  */
-const mysql = require('mysql')
-const config = require('../../config/config')
+const mysql = require('mysql');
+const config = require('../../config/config');
 
 /**
  * 创建连接池
