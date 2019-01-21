@@ -4,7 +4,7 @@
   "description": "node scaffold for maimai or other project to fill work",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=development nodemon app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
     "i-for-prod": "npm install --production"
   },
   "repository": {

@@ -14,7 +14,8 @@ const pool = mysql.createPool({
   port: config.MYSQL.PORT,
   user: config.MYSQL.USER,
   password: config.MYSQL.PASSWORD,
-  database: config.MYSQL.DATABASE
+  database: config.MYSQL.DATABASE,
+  insecureAuth : true // 允许旧的身份验证方法连接到数据库实例
 });
 
 /**
