@@ -8,4 +8,4 @@ const controller = require('../controller');
 module.exports = (router) => {
   router.get('/signup', controller.signup);
   router.get('/signupView', controller.signupView);
-}
+};

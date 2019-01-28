@@ -4,5 +4,5 @@
 const controller = require('../controller');
 
 module.exports = (router) => {
-  router.get('/signin', controller.signin)
-}
+  router.get('/signin', controller.signin);
+};
