@@ -5,8 +5,8 @@ const signup = require('./signup');
 const signin = require('./signin');
 
 exports.handle = async ctx => {
-  ctx.body = 'Hello 2019 25'
-}
+  ctx.body = 'Hello 2019 25';
+};
 
 exports.signup = signup.signup;
 exports.signupView = signup.signupView;

@@ -15,7 +15,7 @@ const pool = mysql.createPool({
   user: config.MYSQL.USER,
   password: config.MYSQL.PASSWORD,
   database: config.MYSQL.DATABASE,
-  insecureAuth : true // 允许旧的身份验证方法连接到数据库实例
+  insecureAuth: true // 允许旧的身份验证方法连接到数据库实例
 });
 
 /**
@@ -37,12 +37,12 @@ const query = (sql, value) => {
           } else {
             resolve(rows);
           }
-          //解除数据库链接 -- 原来reject()/resolve() 并不会return，结束函数
+          // 解除数据库链接 -- 原来reject()/resolve() 并不会return，结束函数
           connection.release();
-        })
+        });
       }
-    })
-  })
-}
+    });
+  });
+};
 
-module.exports = query
+module.exports = query;

@@ -5,12 +5,12 @@
  */
 
 const log4js = require('log4js');
-const log4js_config = require('../../config/logConf');
+const log4jsConfig = require('../../config/logConf');
 
 module.exports = () => {
   // 初始化log4js
   // 日志系统--读取配置文件--这个其实也可以由外部传入 这里就写入到中间件内部就可以了
-  log4js.configure(log4js_config);
+  log4js.configure(log4jsConfig);
   // 三大日志种类: 访问日志 应用日志 错误日志
   const logAccess = log4js.getLogger('access');
   const logApp = log4js.getLogger('app');
@@ -24,5 +24,5 @@ module.exports = () => {
     ctx.logError = logError;
     // 执行下一个中间件
     await next();
-  }
-}
+  };
+};

@@ -12,8 +12,8 @@ const client = redis.createClient({
   password: config.REDIS.PASSWORD
 });
 
-client.on('error', function(err) {
-  console.log('Error: ', err)
-})
+client.on('error', function (err) {
+  console.log('Error: ', err);
+});
 
 module.exports = client;

@@ -5,8 +5,8 @@
  * 3- 其他配置
  */
 
- // 生产环境配置
- const production = {
+// 生产环境配置
+const production = {
   // 服务器端口
   SERVER_PORT: 3000,
   // DB-REDIS配置
@@ -24,10 +24,10 @@
     PASSWORD: 'man/Will179', // 访问用户对应的密码
     DATABASE: 'maimai_test' // 数据库名称--后面改成maimai
   }
- }
+};
 
- // 开发环境配置
- const development = {
+// 开发环境配置
+const development = {
   // 服务器端口
   SERVER_PORT: 3000,
   // DB-REDIS配置
@@ -50,8 +50,8 @@
     PASSWORD: 'man/Will179', // 访问用户对应的密码
     DATABASE: 'maimai_test' // 数据库名称--后面改成maimai
   }
- }
+};
 
- const config = process.env.NODE_ENV !== "development" ? production : development
+const config = process.env.NODE_ENV !== 'development' ? production : development;
 
- module.exports = config
+module.exports = config;
