@@ -31,7 +31,8 @@ exports.getDetailById = (id) => {
 exports.insertDetail = (values) => {
   const { name, password, sex, role, phone, email, lastModifyBy } = values;
   // 拼接sql语句
-  let _sql = `INSERT INTO user (ur_name, ur_password, ur_sex, ur_role, ur_phone, ur_email, last_modify_by) VALUES ("${name}", "${password}", "${sex}", "${role}", "${phone}", "${email}", "${lastModifyBy}");`;
+  let _sql = `INSERT INTO user (ur_name, ur_password, ur_sex, ur_role, ur_phone, ur_email, last_modify_by)
+   VALUES ("${name}", "${password}", "${sex}", "${role}", "${phone}", "${email}", "${lastModifyBy}");`;
   // 执行sql语句 并返回一个promise对象 供调用者获取查询数据
   return query(_sql);
 };
@@ -39,6 +40,14 @@ exports.insertDetail = (values) => {
 /**
  * 根据用户id修改某条用户信息
  */
+exports.updateByid = (values) => {
+  const { id, name, password, sex, role, phone, email, lastModifyBy } = values;
+  // 拼接sql语句
+  let _sql = `UPDATE user SET ur_name='${name}', ur_password='${password}', ur_sex='${sex}', ur_role='${role}', ur_phone='${phone}', ur_email='${email}', last_modify_by=${lastModifyBy}
+   where id=${id}`;
+  // 执行sql语句 并返回一个promise对象 供调用者获取查询数据
+  return query(_sql);
+};
 
 /**
  * 删除某个用户信息
